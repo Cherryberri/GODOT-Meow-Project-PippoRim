@@ -1,0 +1,56 @@
+[gd_scene load_steps=10 format=3 uid="uid://dyom5td4whd2x"]
+
+[ext_resource type="Texture2D" uid="uid://dmc6wlqgobp6m" path="res://grr/resources/graphics/car/main.png" id="1_b1jue"]
+[ext_resource type="Script" path="res://main.gd" id="2_w3a63"]
+[ext_resource type="Texture2D" uid="uid://cc5xc20tu6r25" path="res://grr/resources/graphics/enemies/bug/walk/00004.png" id="3_e31fn"]
+[ext_resource type="Texture2D" uid="uid://bttywkeeom6iy" path="res://grr/resources/graphics/player/scout.png" id="3_xuf21"]
+[ext_resource type="Script" path="res://00004.gd" id="4_1ptuo"]
+[ext_resource type="Script" path="res://scout.gd" id="4_tdkon"]
+[ext_resource type="Texture2D" uid="uid://lfj8h1v5nker" path="res://Final/Final/Grass_background_1.png" id="7_ekncl"]
+[ext_resource type="Texture2D" uid="uid://dshm71hq2agim" path="res://Final/Final/Grass_background_2.png" id="8_c2pm6"]
+[ext_resource type="Texture2D" uid="uid://ciyupxed6b74y" path="res://Final/Final/Salt.png" id="9_lfihc"]
+
+[node name="Sprite2D" type="Sprite2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(521, 497)
+
+[node name="GrassBackground1" type="Sprite2D" parent="Node2D"]
+position = Vector2(-341, -43)
+texture = ExtResource("7_ekncl")
+
+[node name="GrassBackground2" type="Sprite2D" parent="Node2D"]
+position = Vector2(4, -36)
+texture = ExtResource("8_c2pm6")
+
+[node name="GrassBackground3" type="Sprite2D" parent="Node2D"]
+position = Vector2(355, -47)
+texture = ExtResource("7_ekncl")
+
+[node name="GrassBackground4" type="Sprite2D" parent="Node2D"]
+position = Vector2(706, -42)
+texture = ExtResource("8_c2pm6")
+
+[node name="Salt" type="Sprite2D" parent="Node2D"]
+position = Vector2(-483, 53)
+texture = ExtResource("9_lfihc")
+
+[node name="Main" type="Sprite2D" parent="Node2D"]
+visible = false
+position = Vector2(367, -245)
+scale = Vector2(0.514675, 0.513196)
+texture = ExtResource("1_b1jue")
+script = ExtResource("2_w3a63")
+
+[node name="Scout" type="Sprite2D" parent="Node2D"]
+position = Vector2(48, -343)
+texture = ExtResource("3_xuf21")
+offset = Vector2(59, 43)
+script = ExtResource("4_tdkon")
+
+[node name="00004" type="Sprite2D" parent="."]
+position = Vector2(114, 270)
+rotation = -1.57005
+scale = Vector2(0.051924, -0.0611548)
+texture = ExtResource("3_e31fn")
+script = ExtResource("4_1ptuo")
